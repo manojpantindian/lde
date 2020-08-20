@@ -1,4 +1,4 @@
-,<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Covid'19 Chart</title>
@@ -14,11 +14,12 @@
         })
         .then((myJson) => {
          // create data variable for the chart
+          console.log(myJson)
           var data = {
             header: ["S. N.",	"Name",	"Age", "Father's/Husband Name",	"Mobile no.",	"Travel from", "Travel to",	"Date of Departure", "Date of Arrival",
                      "Contact", "Tracing of",	"Covid-19 Symptoms", "Location of quarantine", "Sampling date",	"Sampling result",	"Isolation Location",
                      "Check in", "Check out",	"Remarks"],
-            rows: myJson.data.1
+            rows: myJson.data
           }
           // create the chart
           var chart = anychart.column();
